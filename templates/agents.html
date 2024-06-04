@@ -1,0 +1,46 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #087784;
+        }
+        h2 {
+            color: darkcyan;
+        }
+        a {
+            background-color: #087784;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<!-- Dont change this functionality -->
+<body>
+    <h1>List of Agents are:</h1>
+    {% for i in threads %}
+
+        <h2> {{ i.name }} </h2>
+        <h2> {{ ips[threads.index(i)] }} </h2>
+
+
+        <a href = 'http://127.0.0.1:5000/{{i.name}}/executecmd'>Execute</a>
+
+
+        {% endfor %}
+</body>
+</html>
